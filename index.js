@@ -24,7 +24,7 @@ function getJson$(inUrl, inQs) {
   var options = {
     method: 'GET',
     hostname: parsedUrl.hostname,
-    port: 80,
+    port: parsedUrl.port || 80,
     path: parsedUrl.path + (queryStringified ? '?' + queryStringified : '')
   };
 
