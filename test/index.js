@@ -51,3 +51,16 @@ describe('#getJson$', function() {
     });
   });
 });
+
+describe('$postJson$', function() {
+  it('should POST and parse a json response', function(done) {
+    nock('http://mert.com')
+      .post('/poster', '{"post":"good"}')
+      .reply('200', '{"response":"good"}');
+
+    rxHttp.postJson$('http://mert.com/poster', {post: 'good'}).subscribe(function(result) {
+      assert.deepEqual(result, {response: 'good'});
+      done();
+    });
+  });
+});
