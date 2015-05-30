@@ -1,14 +1,14 @@
 {
   "name": "rx-http",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An minimal http library built on Rx and core Node libraries",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/jondlm/rx-http.git"
+    "type": "git",
+    "url": "https://github.com/jondlm/rx-http.git"
   },
   "bugs": {
-    "url" : "https://github.com/jondlm/rx-http/issues"
+    "url": "https://github.com/jondlm/rx-http/issues"
   },
   "scripts": {
     "test": "mocha"
