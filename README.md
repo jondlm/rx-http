@@ -1,4 +1,4 @@
-# Rx http (WORK IN PROGRESS)
+# Rx http (WIP)
 
 This library was written to wrap the core Node.js http library in Rx
 observables. It also enforces a lot of opinions on your requests. I don't
@@ -16,7 +16,7 @@ idioms in my code.
 Each method returns an `Observable` and may emit an event on either the onNext,
 onError, or onCompleted channels.
 
-`#getJson$`
+### `getJson$`
 
 ```javascript
 var rxHttp = require('rx-http');
@@ -32,7 +32,7 @@ rxHttp.getJson$('http://example.com/user/1').subscribe(
 );
 ```
 
-`#postJson$`
+### `postJson$`
 
 ```javascript
 rxHttp.postJson$('http://example.com/user', {name: 'jon'}).subscribe(function(obj) {
