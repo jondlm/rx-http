@@ -13,8 +13,8 @@ idioms in my code.
 
 ## Docs
 
-Each method returns an `Observable` and may emit an event on either the onNext,
-onError, or onCompleted channels.
+Each method returns an `Observable` and may emit an event on either the `next`,
+`error`, or `complete` channels.
 
 ### `getJson$`
 
@@ -26,9 +26,9 @@ rxHttp.getJson$('http://example.com/user/1').subscribe(function(obj) {
 });
 
 rxHttp.getJson$('http://example.com/user/1').subscribe(
-  function(obj) { /* onNext */ },
-  function(err) { /* onError */ },
-  function() { /* onCompleted */ }
+  function(obj) { /* next */ },
+  function(err) { /* error */ },
+  function() { /* complete */ }
 );
 ```
 
@@ -47,4 +47,3 @@ This code is unit tested with mock http calls.
 ```
 npm test
 ```
-

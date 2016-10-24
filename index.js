@@ -1,6 +1,6 @@
 'use strict';
 
-var Rx = require('rx');
+var Rx = require('rxjs');
 var qs = require('querystring');
 var url = require('url');
 var http = require('http');
@@ -37,14 +37,14 @@ function getJson$(inUrl, inQs) {
       res.on('end', function() {
         var parsed;
         try { parsed = JSON.parse(response); }
-        catch (e) { observer.onError(e); }
+        catch (e) { observer.error(e); }
 
-        observer.onNext(parsed);
-        observer.onCompleted();
+        observer.next(parsed);
+        observer.complete();
       });
     });
 
-    req.on('error', function(e) { observer.onError(e); });
+    req.on('error', function(e) { observer.error(e); });
 
     req.end();
   });
@@ -84,7 +84,7 @@ function postJson$(inUrl, body, inQs) {
 
     // Make sure we can parse the `body`
     try { stringifiedBody = JSON.stringify(body); }
-    catch (e) { observer.onError(e); }
+    catch (e) { observer.error(e); }
 
     // I would set this above, but we don't know it until after we JSON parse
     // the body
@@ -96,14 +96,14 @@ function postJson$(inUrl, body, inQs) {
       res.on('end', function() {
         var parsed;
         try { parsed = JSON.parse(response); }
-        catch (e) { observer.onError(e); }
+        catch (e) { observer.error(e); }
 
-        observer.onNext(parsed);
-        observer.onCompleted();
+        observer.next(parsed);
+        observer.complete();
       });
     });
 
-    req.on('error', function(e) { observer.onError(e); });
+    req.on('error', function(e) { observer.error(e); });
 
     req.write(stringifiedBody);
     req.end();

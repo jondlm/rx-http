@@ -16,7 +16,7 @@
   "author": "Jon de la Motte <jondlm@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "rx": "^2.5.2"
+    "rxjs": "^5.0.0-rc.1"
   },
   "devDependencies": {
     "mocha": "^2.2.5",
