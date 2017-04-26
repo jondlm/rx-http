@@ -1,6 +1,6 @@
 {
   "name": "rx-http",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An minimal http library built on Rx and core Node libraries",
   "main": "index.js",
   "repository": {
