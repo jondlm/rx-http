@@ -1,5 +1,3 @@
-'use strict';
-
 var Rx = require('rxjs');
 var qs = require('querystring');
 var url = require('url');

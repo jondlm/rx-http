@@ -11,15 +11,15 @@
     "url": "https://github.com/jondlm/rx-http/issues"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
   },
   "author": "Jon de la Motte <jondlm@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "^5.0.0-rc.1"
+    "rxjs": "^5.3.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
+    "jest": "^19.0.2",
     "nock": "^2.2.0"
   }
 }
